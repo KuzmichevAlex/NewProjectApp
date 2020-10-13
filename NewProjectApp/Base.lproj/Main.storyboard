@@ -15,6 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQe-aj-LXQ">
+                                <rect key="frame" x="46.5" y="156" width="282" height="42"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="36"/>
+                                <color key="textColor" red="0.24741619825363159" green="0.74997323751449585" blue="0.084788896143436432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uC5-Ns-NA2">
                                 <rect key="frame" x="87" y="523" width="201" height="30"/>
                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -26,27 +32,41 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQe-aj-LXQ">
-                                <rect key="frame" x="68" y="156" width="220" height="33"/>
-                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="28"/>
-                                <color key="textColor" red="0.24741619825363159" green="0.74997323751449585" blue="0.084788896143436432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g1-UE-iJl">
+                                <rect key="frame" x="87" y="523" width="201" height="30"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="201" id="gr2-ni-2B8"/>
+                                </constraints>
+                                <color key="tintColor" red="0.91899222140000003" green="0.38446575399999999" blue="0.25492814180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPrassed" destination="BYZ-38-t0r" eventType="touchUpInside" id="M5g-iS-Fs4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9g1-UE-iJl" secondAttribute="bottom" constant="114" id="0vJ-3o-j4r"/>
                             <constraint firstItem="LQe-aj-LXQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D78-oA-qWe"/>
-                            <constraint firstItem="LQe-aj-LXQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="N2T-Z4-VZn"/>
                             <constraint firstAttribute="width" secondItem="uC5-Ns-NA2" secondAttribute="width" multiplier="1.86567" id="kQw-WE-KHO"/>
+                            <constraint firstItem="9g1-UE-iJl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="keE-rt-5Tt"/>
                             <constraint firstItem="uC5-Ns-NA2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lEs-33-bcc"/>
+                            <constraint firstItem="LQe-aj-LXQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="156" id="rh9-1w-lHO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uC5-Ns-NA2" secondAttribute="bottom" constant="114" id="tQ0-Re-FrT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="helloWorldLable" destination="LQe-aj-LXQ" id="L8e-dD-wLT"/>
+                        <outlet property="startButton" destination="9g1-UE-iJl" id="Uy8-jm-5KW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="-85"/>
+            <point key="canvasLocation" x="338" y="-94"/>
         </scene>
     </scenes>
 </document>
